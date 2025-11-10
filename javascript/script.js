@@ -1,6 +1,7 @@
 let todoList = [];
 let counter = 1;
 
+//Adiciona uma nova tarefa à lista de tarefas
 function addTodo() {
     const titleInput = document.getElementById('task-name').value;
     const descInput = document.getElementById('task-desc').value;
@@ -16,11 +17,13 @@ function addTodo() {
     renderTodoList();
 }
 
+//Remove uma tarefa da lista de tarefas
 function removeTodo(id) {
     todoList = todoList.filter(todo => todo.id !== id);
     renderTodoList();
 }
 
+//Atualiza uma tarefa existente na lista de tarefas
 function updateTodo(id) {
     const todo = todoList.find(todo => todo.id === id);
 
@@ -35,6 +38,7 @@ function updateTodo(id) {
     renderTodoList();
 }
 
+//Marca uma tarefa como concluída ou não concluída
 function finishTodo(id) {
     const todo = todoList.find(todo => todo.id === id);
     if (!todo) return;
@@ -42,6 +46,7 @@ function finishTodo(id) {
     renderTodoList();
 }
 
+//Renderiza a lista de tarefas na tabela HTML
 function renderTodoList() {
     const tableBody = document.getElementById('todo-table');
 
@@ -81,3 +86,19 @@ function renderTodoList() {
     })
 
 }
+
+function saveTodoList() {
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
+function loadTodoList() {
+    const storedList = localStorage.getItem('todoList');
+    if (storedList) {
+        todoList = JSON.parse(storedList);
+        counter = todoList.length ? Math.max(...todoList.map(todo => todo.id)) + 1 : 1;
+        renderTodoList();
+    }
+}
+
+loadTodoList()
+renderTodoList();
