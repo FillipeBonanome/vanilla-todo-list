@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(2, 7, 12);
+    color: rgb(242, 247, 253);
+    font-family: 'Roboto', sans-serif;
+}
+
+#title {
+    text-align: center;
+}
+
+.container {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+table {
+    width: 60%;
+}
+
+th {
+    color: rgb(2, 7, 12);
+    padding: 12px;
+    text-align: left;
+    background-color: rgb(18, 247, 170);
+}
+
+td {
+    background-color: rgb(8, 15, 22);
+    height: 64px;
+    text-align: center;
+}
+
+.todo-id {
+    color:rgb(22, 255, 138);
+}
+
+.todo-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-action svg {
+    cursor: pointer;
+    margin: 0 8px;
+    fill: rgb(255, 53, 53);
+    height: 32px;
+}
+
+.finished {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.inputs {
+    display: flex;
+    gap: 16px;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgb(18, 247, 170);
+    padding: 4px 8px;
+}
+
+button {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(18, 247, 170);
+    color: rgb(2, 7, 12);
+    font-weight: bold;
+    cursor: pointer;
+}
