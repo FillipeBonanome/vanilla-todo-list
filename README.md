@@ -1,5 +1,10 @@
 # Lista de Tarefas utilizando apenas vanilla Javascript
-Este é um projeto recomendado para iniciantes em Javascript, o mesmo possui as funcionalidades de criação, deleção e edição de tarefas, além de ser possível salva-las na local storage do seu navegador.
+Este é um projeto recomendado para __**iniciantes**__ em Javascript, o mesmo possui as funcionalidades de criação, deleção e edição de tarefas, além de ser possível salva-las na local storage do seu navegador.
+
+## Pontos Treinados
+* Manipulação de DOM
+* Persistência de Dados utilizano Local Storage
+* Estruturação de HTML e estilização básica com CSS
 
 ## Tecnologias Utilizadas
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
