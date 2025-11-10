@@ -87,10 +87,13 @@ function renderTodoList() {
 
 }
 
+//Salva a lista de tarefas no localStorage
 function saveTodoList() {
     localStorage.setItem('todoList', JSON.stringify(todoList));
+    alert('Lista de tarefas salva com sucesso!');
 }
 
+//Carrega a lista de tarefas do localStorage
 function loadTodoList() {
     const storedList = localStorage.getItem('todoList');
     if (storedList) {
@@ -100,5 +103,6 @@ function loadTodoList() {
     }
 }
 
+//Carregamento e renderização inicial
 loadTodoList()
 renderTodoList();
